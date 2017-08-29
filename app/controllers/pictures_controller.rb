@@ -14,4 +14,11 @@ class PicturesController < ApplicationController
  def create
    render text: "Received POST request to '/pictures' with the data URL: #{params}"
  end
+
+ def destroy
+    @picture = Picture.find(params[:id])
+    @picture.destroy
+    redirect_to "/pictures"
+  end
+  
 end

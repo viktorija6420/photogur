@@ -6,5 +6,6 @@ post 'pictures' => 'pictures#create'
 get 'pictures/new' => 'pictures#new'
 
 get 'pictures/:id' => 'pictures#show'
+delete 'pictures/:id' => 'pictures#destroy'
 
 end
