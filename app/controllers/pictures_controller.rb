@@ -13,7 +13,6 @@ def new
 end
 
    def create
-     render text: "Received POST request to '/pictures' with the data URL: #{params}"
       @picture = Picture.new
 
       @picture.title = params[:picture][:title]
@@ -30,7 +29,7 @@ end
      end
 
     end
-end
+
     def edit
         @picture = Picture.find(params[:id])
       end
