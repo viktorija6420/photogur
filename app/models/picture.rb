@@ -25,4 +25,9 @@ class Picture < ApplicationRecord
    end
    pictures
   end
+
+  validates :artist, presence: true #when you create a picture
+  validates :title, length: { in: 3..20 }
+  validates :url, presence: true, uniqueness: true
+
 end
