@@ -1,7 +1,10 @@
 <h1>Most recent pictures</h1>
+<%= link_to("New Picture", "/pictures/new")%>
 <ul>
   <% @most_recent_pictures.each do |picture| %>
     <li><%= picture.title %></li>
+    <%= link_to("Edit", "/pictures/#{picture.id}/edit") %> | <%= link_to("Delete", "/pictures/#{picture.id}", method: :delete, data: {confirm: "Are you sure you want to delete this picture?"})  %>
+
   <% end %>
 </ul>
 
@@ -13,6 +16,8 @@
 <ul>
 <%Picture.older_than_month.each do |picture| %>
 <li><%= picture.title %></li>
+<%= link_to("Edit", "/pictures/#{picture.id}/edit") %> | <%= link_to("Delete", "/pictures/#{picture.id}", method: :delete, data: {confirm: "Are you sure you want to delete this picture?"})  %>
+
 <%end%>
 </ul>
 
