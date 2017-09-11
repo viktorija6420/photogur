@@ -21,4 +21,7 @@ get 'users/new' => 'users#new'
 
 get '/sessions/new' => 'sessions#new'
 post '/sessions/new' => 'sessions#create'
+
+delete '/sessions' => 'sessions#destroy'
+
 end
