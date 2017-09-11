@@ -1,5 +1,5 @@
 <h1>Most recent pictures</h1>
-<%= link_to("New Picture", "/pictures/new")%>
+<%= link_to("New Picture", new_picture_path)%>
 <ul>
   <% @most_recent_pictures.each do |picture| %>
     <li><%= picture.title %></li>
