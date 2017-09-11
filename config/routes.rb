@@ -18,4 +18,7 @@ resources :pictures
 get 'users' => 'pictures#index'
 post 'users' => 'users#create'
 get 'users/new' => 'users#new'
+
+get '/sessions/new' => 'sessions#new'
+post '/sessions/new' => 'sessions#create'
 end
